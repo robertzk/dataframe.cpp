@@ -13,6 +13,13 @@
 namespace dataframe {
   class dataframe {
   public:
+    
+    // Mimicking STL iterator tags.
+    struct column_tag { };
+    struct double_column_tag : public column_tag { };
+    struct int_column_tag : public double_column_tag { };
+    struct bool_column_tag : public int_column_tag { };
+    struct string_column_tag : public column_tag { };
 
     union column {
       std::vector<int>         *int_column;
@@ -23,7 +30,7 @@ namespace dataframe {
     
 
   private:
-    std::map<std::string, column> columns;
+    std::map<std::string, std::pair<column_tag, column> > columns;
     
 
   };
