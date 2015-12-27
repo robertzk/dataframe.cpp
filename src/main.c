@@ -1,3 +1,7 @@
+#ifndef DATAFRAME_MAIN
+#define DATAFRAME_MAIN 1
+#endif
+
 #include <iostream>
 #include "dataframe/dataframe.h"
 
