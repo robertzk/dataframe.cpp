@@ -17,8 +17,8 @@ namespace dataframe {
     // Mimicking STL iterator tags.
     struct column_tag { };
     struct double_column_tag : public column_tag { };
-    struct int_column_tag : public double_column_tag { };
-    struct bool_column_tag : public int_column_tag { };
+    struct int_column_tag    : public double_column_tag { };
+    struct bool_column_tag   : public int_column_tag { };
     struct string_column_tag : public column_tag { };
 
     union column {
